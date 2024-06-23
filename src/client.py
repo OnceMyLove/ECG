@@ -5,12 +5,12 @@ import struct
 import time
 HOST="192.168.4.1"
 PORT=90
-data_array=deque(maxlen=1000)
+data_array=deque(maxlen=600)
 t=0
 client=socket(AF_INET,SOCK_STREAM)
 client.connect((HOST,PORT))
 plt.ion()
-fig=plt.figure()
+fig=plt.figure(figsize=(12,8))
 ax = fig.add_subplot(111)
 count=50
 
