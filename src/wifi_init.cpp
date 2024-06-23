@@ -35,11 +35,11 @@ void client(void){
         Serial.print("Received data: ");
         Serial.println(data);
         while(Client.connected()){
-            for(int i=0;i<count;i++){
+            for(int i=0;i<count;i++){   //一次采集count个点，然后上传
                 array[i]=analogRead(A0);
                 
                 // Serial.println(analogRead(A0));
-                delay(10);   
+                delay(10);   //ms
             }
             Client.write((uint8_t*)array,2*count);
             
