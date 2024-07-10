@@ -1,10 +1,10 @@
 from scipy import signal
-import pywt
+# import pywt
 import matplotlib.pyplot as plt
 
 
 
-def singnal_filter(data,frequency=256,highpass=20,lowpass=1):#frequency为采样频率
+def singnal_filter(data,frequency=200,highpass=20,lowpass=1):#frequency为采样频率
     [b,a]=signal.butter(3,[lowpass/frequency*2, highpass/frequency*2],
                         'bandpass')
     Signal_pro=signal.filtfilt(b,a,data)
